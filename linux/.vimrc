@@ -1,5 +1,8 @@
 " Ref:https://lambdalisue.hatenablog.com/entry/2013/06/23/071344
 
+" sudo apt install curl git
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 " # 必須設定
 " release autogroup in MyAutoCmd
 augroup MyAutoCmd
@@ -70,7 +73,7 @@ set number              " 行番号の表示
 set laststatus=2        " ステータスラインを常に表示
 set wrap                " 長いテキストの折り返し
 set textwidth=0         " 自動的に改行が入るのを無効化
-set colorcolumn=80,100,120  " その代わり80,100,120文字目にラインを入れる
+set colorcolumn=80,120  " その代わり80,100,120文字目にラインを入れる
 
 " 前時代的スクリーンベルを無効化
 set t_vb=
@@ -255,8 +258,8 @@ noremap  <C-f><C-h> <Home>
 noremap! <C-f><C-h> <Home>
 noremap  <C-f><C-l> <End>
 noremap! <C-f><C-l> <End>
-call submode#enter_with('cursormove', 'inv', '', '<C-f><C-j>', '<PageDown>')
-call submode#map('cursormove', 'inv', '', '<C-j>', '<PageDown>')
-call submode#enter_with('cursormove', 'inv', '', '<C-f><C-k>', '<PageUp>')
-call submode#map('cursormove', 'inv', '', '<C-k>', '<PageUp>')
+call submode#enter_with('crsmv', 'inv', '', '<C-f><C-j>', '<PageDown>')
+call submode#map('crsmv', 'inv', '', '<C-j>', '<PageDown>')
+call submode#enter_with('crsmv', 'inv', '', '<C-f><C-k>', '<PageUp>')
+call submode#map('crsmv', 'inv', '', '<C-k>', '<PageUp>')
 
